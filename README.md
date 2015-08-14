@@ -63,8 +63,8 @@ $ curl http://localhost:3000/param/1234
 1234
 ```
 
-By default it will look on the resolver table trying to find a default resolver for that name.
-We have one for res that pass the Response object, if can't find one you create a default that look for the argument name on the params and on the query in that order.
+It will look on the resolver table trying to find a resolver for that name.
+We have one for res that pass the Response object, if it can't find one a default will be created, will look for the argument name on the params and on the query in that order.
 
 ### Request.query
 
@@ -74,7 +74,7 @@ app.use('/query', function(name, res) {
 });
 ```
 
-In that case we don't have name on the params object, we can pass it as a query:
+In that case we don't have 'name' on the params object, we can pass it as a query:
 ```shell
 $ curl http://localhost:3000/query?name=test
 test
