@@ -3,14 +3,22 @@
   "version": "0.0.1",
   "description": "A resolver of arguments for express",
   "main": "common.js",
-  "dependencies": {},
+  "repository": "lgvo/express-args-resolver",
+  "keywords": [
+      "express",
+      "arguments",
+      "resolve"
+  ],
+  "dependencies": {
+    "js-args-names": "0.0.1"
+  },
   "devDependencies": {
     "babel": "~5.6.14",
     "chai": "~3.0.0",
-    "karma": "~0.12.37",
     "chai-as-promised": "~5.1.0",
-    "sinon": "~1.15.4",
-    "mocha": "~2.2.5"
+    "karma": "~0.12.37",
+    "mocha": "~2.2.5",
+    "sinon": "~1.15.4"
   },
   "scripts": {
     "build": "babel --modules common express-args-resolver.js > common.js",

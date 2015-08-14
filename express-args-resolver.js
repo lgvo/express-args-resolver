@@ -1,4 +1,4 @@
-// express-args-resolver - A resolver of arguments for express
+// express-args-resolver - resolver of arguments for express
 // Copyright © 2015 Luis Gustavo Vilela de Oliveira
 // 
 // Permission is hereby granted, free of charge, to any person obtaining
@@ -59,6 +59,10 @@ function getQuery(req) {
     return req.query;
 }
 
+function getBody(req) {
+    return req.body;
+}
+
 var resolverMake = makeDefault;
 
 var resolvers = {
@@ -68,7 +72,8 @@ var resolvers = {
     "response": getResponse,
     "next": getNextCallback,
     "params": getParams,
-    "query": getQuery
+    "query": getQuery,
+    "body": getBody
 };
 
 export function getResolvers(func) {

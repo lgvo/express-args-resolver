@@ -84,6 +84,21 @@ describe('Params Resolver', function() {
         
     });
 
+    it('should resolve body', function() {
+
+        var req = {
+            body: 'data'
+        };
+        
+        var resolvers = paramResolversFor(function(body) {
+            return body;
+        });
+
+        expect(resolvers.length).to.equal(1);
+        expect(resolvers[0](req, 'response', 'next')).to.equal('data');
+        
+    });
+
     it('should resolve from params and query by default', function() {
 
         var reqWithParam = {
@@ -172,7 +187,7 @@ describe('Proxy', function() {
         expect(result.next).to.equal('next');
     });
 
-    it('should create only if necessary (params in the original order: req, res, next should use the same function)', function() {
+    it('should create only if necessary (params in the original order: req, res, next must use the same function)', function() {
 
         function req(request) {
 
