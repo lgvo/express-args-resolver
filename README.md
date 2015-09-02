@@ -1,5 +1,12 @@
 # Express Arguments Resolver
 
+[![Build Status](https://travis-ci.org/lgvo/express-args-resolver.svg?branch=master)](https://travis-ci.org/lgvo/express-args-resolver)
+[![Coverage Status](https://coveralls.io/repos/lgvo/express-args-resolver/badge.svg?branch=master&service=github)](https://coveralls.io/github/lgvo/express-args-resolver?branch=master)
+[![npm version](https://badge.fury.io/js/express-args-resolver.svg)](http://badge.fury.io/js/express-args-resolver)
+[![Code Climate](https://codeclimate.com/github/lgvo/express-args-resolver/badges/gpa.svg)](https://codeclimate.com/github/lgvo/express-args-resolver)
+[![npm](https://img.shields.io/npm/dm/express-args-resolver.svg)](https://www.npmjs.com/package/express-args-resolver)
+
+
 Resolve function arguments to express objects based on the arguments names.
 
 ## Installation
